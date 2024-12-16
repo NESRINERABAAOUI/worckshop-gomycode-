@@ -1,0 +1,407 @@
+db["contactlist"].find()
+{
+  _id: ObjectId('6760304aa01ef3c5ba9ebca9'),
+  nom: 'Ben',
+  'prénom': 'Moris',
+  email: 'ben@gmail.com',
+  age: 26
+}
+{
+  _id: ObjectId('676033bba01ef3c5ba9ebcab'),
+  Nom: 'Kefi',
+  'Prénom': 'Seif',
+  Courriel: 'kefi@gmail.com',
+  'âge': 15
+}
+{
+  _id: ObjectId('676033bba01ef3c5ba9ebcac'),
+  Nom: 'Emilie',
+  'Prénom': 'brouge',
+  Courriel: 'emilie.b@gmail.com',
+  'âge': 40
+}
+{
+  _id: ObjectId('676033bba01ef3c5ba9ebcad'),
+  Nom: 'Alex',
+  'Prénom': 'brown',
+  'âge': 4
+}
+{
+  _id: ObjectId('676033bba01ef3c5ba9ebcae'),
+  Nom: 'Denzel',
+  'Prénom': 'Washington',
+  'âge': 3
+}
+db["contactlist"].find({"_id":"676033bba01ef3c5ba9ebcad"})
+db["contactlist"].find({"_id":"676033bba01ef3c5ba9ebcad"})
+db["contactlist"].findById({"_id":"676033bba01ef3c5ba9ebcad"})
+TypeError: db["contactlist"].findById is not a function
+db["contactlist"].find({"_id":"676033bba01ef3c5ba9ebcad"})
+db["contactlist"].find()
+{
+  _id: ObjectId('6760304aa01ef3c5ba9ebca9'),
+  nom: 'Ben',
+  'prénom': 'Moris',
+  email: 'ben@gmail.com',
+  age: 26
+}
+{
+  _id: ObjectId('676033bba01ef3c5ba9ebcab'),
+  Nom: 'Kefi',
+  'Prénom': 'Seif',
+  Courriel: 'kefi@gmail.com',
+  'âge': 15
+}
+{
+  _id: ObjectId('676033bba01ef3c5ba9ebcac'),
+  Nom: 'Emilie',
+  'Prénom': 'brouge',
+  Courriel: 'emilie.b@gmail.com',
+  'âge': 40
+}
+{
+  _id: ObjectId('676033bba01ef3c5ba9ebcad'),
+  Nom: 'Alex',
+  'Prénom': 'brown',
+  'âge': 4
+}
+{
+  _id: ObjectId('676033bba01ef3c5ba9ebcae'),
+  Nom: 'Denzel',
+  'Prénom': 'Washington',
+  'âge': 3
+}
+db["contactlist"].findOne("_id":"676033bba01ef3c5ba9ebcac")
+SyntaxError: Unexpected token, expected "," (1:31)
+
+> 1 | db["contactlist"].findOne("_id":"676033bba01ef3c5ba9ebcac")
+    |                                ^
+db["contactlist"].findOne({"_id":"676033bba01ef3c5ba9ebcac"})
+null
+db["contactlist"].find({"_id":ObjectId('676033bba01ef3c5ba9ebcae')})
+{
+  _id: ObjectId('676033bba01ef3c5ba9ebcae'),
+  Nom: 'Denzel',
+  'Prénom': 'Washington',
+  'âge': 3
+}
+db["contactlist"].findOne({"_id":ObjectId('676033bba01ef3c5ba9ebcae')})
+{
+  _id: ObjectId('676033bba01ef3c5ba9ebcae'),
+  Nom: 'Denzel',
+  'Prénom': 'Washington',
+  'âge': 3
+}
+db["contactlist"].find({"age":{"$gt":18}})
+{
+  _id: ObjectId('6760304aa01ef3c5ba9ebca9'),
+  nom: 'Ben',
+  'prénom': 'Moris',
+  email: 'ben@gmail.com',
+  age: 26
+}
+db["contactlist"].insertMany([{
+    "Nom": "Kefi",
+    "Prénom": "Seif",
+    "Courriel": "kefi@gmail.com",
+    "age": 15
+  },
+  {
+    "Nom": "Emilie",
+    "Prénom": "brouge",
+    "Courriel": "emilie.b@gmail.com",
+    "age": 40
+  },
+  {
+    "Nom": "Alex",
+    "Prénom": "brown",
+    "age": 4
+  },
+  {
+    "Nom": "Denzel",
+    "Prénom": "Washington",
+    "age": 3
+  }])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('67603997e72bea255536a9e9'),
+    '1': ObjectId('67603997e72bea255536a9ea'),
+    '2': ObjectId('67603997e72bea255536a9eb'),
+    '3': ObjectId('67603997e72bea255536a9ec')
+  }
+}
+db["contactlist"].find()
+{
+  _id: ObjectId('6760304aa01ef3c5ba9ebca9'),
+  nom: 'Ben',
+  'prénom': 'Moris',
+  email: 'ben@gmail.com',
+  age: 26
+}
+{
+  _id: ObjectId('67603997e72bea255536a9e9'),
+  Nom: 'Kefi',
+  'Prénom': 'Seif',
+  Courriel: 'kefi@gmail.com',
+  age: 15
+}
+{
+  _id: ObjectId('67603997e72bea255536a9ea'),
+  Nom: 'Emilie',
+  'Prénom': 'brouge',
+  Courriel: 'emilie.b@gmail.com',
+  age: 40
+}
+{
+  _id: ObjectId('67603997e72bea255536a9eb'),
+  Nom: 'Alex',
+  'Prénom': 'brown',
+  age: 4
+}
+{
+  _id: ObjectId('67603997e72bea255536a9ec'),
+  Nom: 'Denzel',
+  'Prénom': 'Washington',
+  age: 3
+}
+db["contactlist"].find({"age":{"$gt":18}})
+{
+  _id: ObjectId('6760304aa01ef3c5ba9ebca9'),
+  nom: 'Ben',
+  'prénom': 'Moris',
+  email: 'ben@gmail.com',
+  age: 26
+}
+{
+  _id: ObjectId('67603997e72bea255536a9ea'),
+  Nom: 'Emilie',
+  'Prénom': 'brouge',
+  Courriel: 'emilie.b@gmail.com',
+  age: 40
+}
+db["contactlist"].insertMany([{
+    "Nom": "nesrine",
+    "Prénom": "raabaoui",
+    "Courriel": "nesrine@gmail.com",
+    "age": 15
+  },
+ 
+  {
+    "Nom": "ramzi",
+    "Prénom": "dabbek",
+    "age": 29
+  },
+  ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('67603af2e72bea255536a9ed'),
+    '1': ObjectId('67603af2e72bea255536a9ee')
+  }
+}
+db["contactlist"].find()
+{
+  _id: ObjectId('6760304aa01ef3c5ba9ebca9'),
+  nom: 'Ben',
+  'prénom': 'Moris',
+  email: 'ben@gmail.com',
+  age: 26
+}
+{
+  _id: ObjectId('67603997e72bea255536a9e9'),
+  Nom: 'Kefi',
+  'Prénom': 'Seif',
+  Courriel: 'kefi@gmail.com',
+  age: 15
+}
+{
+  _id: ObjectId('67603997e72bea255536a9ea'),
+  Nom: 'Emilie',
+  'Prénom': 'brouge',
+  Courriel: 'emilie.b@gmail.com',
+  age: 40
+}
+{
+  _id: ObjectId('67603997e72bea255536a9eb'),
+  Nom: 'Alex',
+  'Prénom': 'brown',
+  age: 4
+}
+{
+  _id: ObjectId('67603997e72bea255536a9ec'),
+  Nom: 'Denzel',
+  'Prénom': 'Washington',
+  age: 3
+}
+{
+  _id: ObjectId('67603af2e72bea255536a9ed'),
+  Nom: 'nesrine',
+  'Prénom': 'raabaoui',
+  Courriel: 'nesrine@gmail.com',
+  age: 15
+}
+{
+  _id: ObjectId('67603af2e72bea255536a9ee'),
+  Nom: 'ramzi',
+  'Prénom': 'dabbek',
+  age: 29
+}
+db["contactlist"].find({"age":{"$gt":18},"Nom": { "$regex": "ah", "$options": "i" }})
+db["contactlist"].updateOne({"Nom":"kefi"},{$set{"Prénom":"Anis"}})
+SyntaxError: Unexpected token, expected "," (1:48)
+
+> 1 | db["contactlist"].updateOne({"Nom":"kefi"},{$set{"Prénom":"Anis"}})
+    |                                                 ^
+db["contactlist"].updateOne({"Nom":"kefi"},{$set:{"Prénom":"Anis"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+db["contactlist"].find()
+{
+  _id: ObjectId('6760304aa01ef3c5ba9ebca9'),
+  nom: 'Ben',
+  'prénom': 'Moris',
+  email: 'ben@gmail.com',
+  age: 26
+}
+{
+  _id: ObjectId('67603997e72bea255536a9e9'),
+  Nom: 'Kefi',
+  'Prénom': 'Seif',
+  Courriel: 'kefi@gmail.com',
+  age: 15
+}
+{
+  _id: ObjectId('67603997e72bea255536a9ea'),
+  Nom: 'Emilie',
+  'Prénom': 'brouge',
+  Courriel: 'emilie.b@gmail.com',
+  age: 40
+}
+{
+  _id: ObjectId('67603997e72bea255536a9eb'),
+  Nom: 'Alex',
+  'Prénom': 'brown',
+  age: 4
+}
+{
+  _id: ObjectId('67603997e72bea255536a9ec'),
+  Nom: 'Denzel',
+  'Prénom': 'Washington',
+  age: 3
+}
+{
+  _id: ObjectId('67603af2e72bea255536a9ed'),
+  Nom: 'nesrine',
+  'Prénom': 'raabaoui',
+  Courriel: 'nesrine@gmail.com',
+  age: 15
+}
+{
+  _id: ObjectId('67603af2e72bea255536a9ee'),
+  Nom: 'ramzi',
+  'Prénom': 'dabbek',
+  age: 29
+}
+db["contactlist"].updateOne({"Nom":"Kefi"},{$set:{"Prénom":"Anis"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db["contactlist"].find()
+{
+  _id: ObjectId('6760304aa01ef3c5ba9ebca9'),
+  nom: 'Ben',
+  'prénom': 'Moris',
+  email: 'ben@gmail.com',
+  age: 26
+}
+{
+  _id: ObjectId('67603997e72bea255536a9e9'),
+  Nom: 'Kefi',
+  'Prénom': 'Anis',
+  Courriel: 'kefi@gmail.com',
+  age: 15
+}
+{
+  _id: ObjectId('67603997e72bea255536a9ea'),
+  Nom: 'Emilie',
+  'Prénom': 'brouge',
+  Courriel: 'emilie.b@gmail.com',
+  age: 40
+}
+{
+  _id: ObjectId('67603997e72bea255536a9eb'),
+  Nom: 'Alex',
+  'Prénom': 'brown',
+  age: 4
+}
+{
+  _id: ObjectId('67603997e72bea255536a9ec'),
+  Nom: 'Denzel',
+  'Prénom': 'Washington',
+  age: 3
+}
+{
+  _id: ObjectId('67603af2e72bea255536a9ed'),
+  Nom: 'nesrine',
+  'Prénom': 'raabaoui',
+  Courriel: 'nesrine@gmail.com',
+  age: 15
+}
+{
+  _id: ObjectId('67603af2e72bea255536a9ee'),
+  Nom: 'ramzi',
+  'Prénom': 'dabbek',
+  age: 29
+}
+db["contactlist"].updateOne({"Nom":"Kefi"},{$set:{"Prénom":"Ab"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db["contactlist"].deleteMany({"age": {"$lt":5}})
+{
+  acknowledged: true,
+  deletedCount: 2
+}
+db["contactlist"].find()
+{
+  _id: ObjectId('6760304aa01ef3c5ba9ebca9'),
+  nom: 'Ben',
+  'prénom': 'Moris',
+  email: 'ben@gmail.com',
+  age: 26
+}
+{
+  _id: ObjectId('67603997e72bea255536a9e9'),
+  Nom: 'Kefi',
+  'Prénom': 'Ab',
+  Courriel: 'kefi@gmail.com',
+  age: 15
+}
+{
+  _id: ObjectId('67603997e72bea255536a9ea'),
+  Nom: 'Emilie',
+  'Prénom': 'brouge',
+  Courriel: 'emilie.b@gmail.com',
+  age: 40
+}
+{
+  _id: ObjectId('67603af2e72bea255536a9ed'),
+  Nom: 'nesrine',
+  'Prénom': 'raabaoui',
+  Courriel: 'nesrine@gmail.com',
+  age: 15
+}
